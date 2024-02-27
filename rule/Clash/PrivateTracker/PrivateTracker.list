@@ -7,6 +7,8 @@
 # DOMAIN-SUFFIX: 122
 # IP-CIDR: 6
 # TOTAL: 273
+DOMAIN,tleechreload.org
+DOMAIN,xingtan.one
 DOMAIN,1337.abcvg.info
 DOMAIN,1c.premierzal.ru
 DOMAIN,6.pocketnet.app
@@ -79,6 +81,7 @@ DOMAIN,torrentsmd.com
 DOMAIN,tr.burnabyhighstar.com
 DOMAIN,tr.qfruiti.com
 DOMAIN,tr.qfruiti.in
+DOMAIN,tracker.tleechreload.org
 DOMAIN,tracker-udp.gbitt.info
 DOMAIN,tracker.0x7c0.com
 DOMAIN,tracker.anima.nz
@@ -270,10 +273,17 @@ DOMAIN-SUFFIX,trontv.com
 DOMAIN-SUFFIX,u2.dmhy.org
 DOMAIN-SUFFIX,uhdbits.org
 DOMAIN-SUFFIX,xauat6.edu.cn
+DOMAIN-SUFFIX,pttime.org
+DOMAIN-SUFFIX,torrentleech.org
+DOMAIN-SUFFIX,cyanbug.net
 DOMAIN-KEYWORD,announce
 DOMAIN-KEYWORD,chdbits
 DOMAIN-KEYWORD,m-team
 DOMAIN-KEYWORD,torrent
+DOMAIN-KEYWORD,torrentleech
+DOMAIN-KEYWORD,pttime
+DOMAIN-KEYWORD,cyanbug
+DOMAIN-KEYWORD,xingtan
 IP-CIDR,207.241.226.111/32,no-resolve
 IP-CIDR,207.241.231.226/32,no-resolve
 IP-CIDR,46.17.46.112/32,no-resolve
