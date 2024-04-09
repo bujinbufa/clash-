@@ -105,6 +105,7 @@ DOMAIN-SUFFIX,okx.com
 PROCESS-NAME,OKX.exe
 DOMAIN-KEYWORD,okx
 DOMAIN-KEYWORD,coinall
+DOMAIN,sentry.coinall.ltd
 
 # > asproex
 DOMAIN-SUFFIX,asproex.com
