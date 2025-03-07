@@ -1,44 +1,51 @@
-# url 里填写自己的订阅,名称不能重复
+# 配置代理提供者，填写自己的订阅链接，名称必须唯一
 proxy-providers:
   provider1:
-    url: ""
-    type: http
-    interval: 86400
-    health-check: {enable: true,url: "https://www.gstatic.com/generate_204",interval: 300}
+    url: ""  # 在此处填写 provider1 的订阅链接
+    type: http  # 订阅链接使用 HTTP/HTTPS
+    interval: 86400  # 每24小时（86400秒）自动更新
     override:
-      additional-prefix: "[provider1]"
-    filter: "(?i)^(?!.*(?:流量|套餐|官网|群组)).*"
+      additional-prefix: "[provider1]"  # 为 provider1 的节点名称添加前缀，便于区分
+    filter: "(?i)^(?!.*(?:流量|套餐|官网|群组)).+$"  # 过滤掉包含特定关键字的节点，确保匹配完整的节点名称
 
   provider2:
-    url: ""
-    type: http
-    interval: 86400
-    health-check: {enable: true,url: "https://www.gstatic.com/generate_204",interval: 300}
+    url: ""  # 在此处填写 provider2 的订阅链接
+    type: http  # 订阅链接使用 HTTP/HTTPS
+    interval: 86400  # 每24小时（86400秒）自动更新
     override:
-      additional-prefix: "[provider2]"
-    filter: "(?i)^(?!.*(?:流量|套餐|官网|群组)).*"
+      additional-prefix: "[provider2]"  # 为 provider2 的节点名称添加前缀，便于区分
+    filter: "(?i)^(?!.*(?:流量|套餐|官网|群组)).+$"  # 过滤掉包含特定关键字的节点，确保匹配完整的节点名称
 
-proxies: 
-  - name: "直连"
-    type: direct
-    udp: true
+# 配置直连节点
+proxies:
+  - name: "直连"  # 节点名称
+    type: direct  # 直接连接类型
+    udp: true  # 支持 UDP 协议
 
-mixed-port: 7890
-allow-lan: true
-bind-address: '*'
-mode: rule
-log-level: info
-external-controller: '127.0.0.1:9090'
+# 其他 Clash 配置
+mixed-port: 7890  # 设置混合代理端口，支持 HTTP 和 SOCKS 代理
+allow-lan: true  # 允许局域网设备连接
+bind-address: '*'  # 绑定所有网络地址
+mode: rule  # 运行模式，使用规则模式
+log-level: info  # 日志等级为 info，记录常规信息
+
+# 配置外部控制器
+external-controller: '127.0.0.1:9090'  # 外部控制接口地址
+
+# DNS 配置
 dns:
-    enable: false
-    ipv6: false
-    default-nameserver: [223.5.5.5, 119.29.29.29]
-    enhanced-mode: fake-ip
-    fake-ip-range: 198.18.0.1/16
-    use-hosts: true
-    nameserver: ['https://doh.pub/dns-query', 'https://dns.alidns.com/dns-query']
-    fallback: ['https://doh.dns.sb/dns-query', 'https://dns.cloudflare.com/dns-query', 'https://dns.twnic.tw/dns-query', 'tls://8.8.4.4:853']
-    fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
+    enable: false  # 禁用 Clash 内置 DNS
+    ipv6: false  # 禁用 IPv6 支持
+    default-nameserver: [223.5.5.5, 119.29.29.29]  # 设置默认的 DNS 服务器
+    enhanced-mode: fake-ip  # 使用 Fake-IP 模式进行 DNS 查询
+    fake-ip-range: 198.18.0.1/16  # Fake-IP 的地址范围
+    use-hosts: true  # 使用 hosts 文件来解析域名
+    nameserver: ['https://doh.pub/dns-query', 'https://dns.alidns.com/dns-query']  # 设置 DoH (DNS over HTTPS) 服务器
+    fallback: ['https://doh.dns.sb/dns-query', 'https://dns.cloudflare.com/dns-query', 'https://dns.twnic.tw/dns-query', 'tls://8.8.4.4:853']  # 设置备用的 DNS 查询地址
+    fallback-filter: 
+      geoip: true  # 根据地理位置过滤 DNS 请求
+      ipcidr: [240.0.0.0/4, 0.0.0.0/32]  # 排除指定的 IP 地址范围
+
 
 proxy-groups:
 
@@ -124,11 +131,11 @@ proxy-groups:
       enable: true
       lazy: true  # 仅在节点超时或被使用时才测试
 
-  - name: 美国
+  - name: 韩国
     type: fallback
     include-all: true
     exclude-type: direct
-    filter: "(?i)美|us|unitedstates|united states"
+    filter: "(?i)韩|kr|korea|korean|seoul"
     url: "http://www.gstatic.com/generate_204"
     tolerance: 20
     health-check: 
@@ -145,6 +152,62 @@ proxy-groups:
     health-check: 
       enable: true
       lazy: true  # 仅在节点超时或被使用时才测试
+
+  - name: 美国
+    type: fallback
+    include-all: true
+    exclude-type: direct
+    filter: "(?i)美|us|unitedstates|united states"
+    url: "http://www.gstatic.com/generate_204"
+    tolerance: 20
+    health-check: 
+      enable: true
+      lazy: true  # 仅在节点超时或被使用时才测试
+
+  - name: 加拿大
+    type: fallback
+    include-all: true
+    exclude-type: direct
+    filter: "(?i)加|ca|canada|toronto|vancouver|montreal"
+    url: "http://www.gstatic.com/generate_204"
+    tolerance: 20
+    health-check: 
+      enable: true
+      lazy: true  # 仅在节点超时或被使用时才测试
+
+  - name: 英国
+    type: fallback
+    include-all: true
+    exclude-type: direct
+    filter: "(?i)英|uk|unitedkingdom|united kingdom|london|manchester|birmingham"
+    url: "http://www.gstatic.com/generate_204"
+    tolerance: 20
+    health-check: 
+      enable: true
+      lazy: true  # 仅在节点超时或被使用时才测试
+
+  - name: 法国
+    type: fallback
+    include-all: true
+    exclude-type: direct
+    filter: "(?i)法|fr|france|paris|marseille|lyon"
+    url: "http://www.gstatic.com/generate_204"
+    tolerance: 20
+    health-check: 
+      enable: true
+      lazy: true  # 仅在节点超时或被使用时才测试
+
+  - name: 德国
+    type: fallback
+    include-all: true
+    exclude-type: direct
+    filter: "(?i)德|de|germany|berlin|frankfurt|munich"
+    url: "http://www.gstatic.com/generate_204"
+    tolerance: 20
+    health-check: 
+      enable: true
+      lazy: true  # 仅在节点超时或被使用时才测试
+
 
   - name: 其它地区
     type: fallback
