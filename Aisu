@@ -51,51 +51,51 @@ proxy-groups:
 
   - name: 默认
     type: select
-    proxies: [自动选择,直连,香港,台湾,日本,新加坡,美国,其它地区,全部节点]
+    proxies: [自动选择,直连,香港,台湾,日本,韩国,新加坡,美国,加拿大,英国,法国,德国,其它地区,全部节点]
 
   - name: Google
     type: select
-    proxies: [默认,香港,台湾,日本,新加坡,美国,其它地区,全部节点,自动选择,直连]
+    proxies: [默认,香港,台湾,日本,韩国,新加坡,美国,加拿大,英国,法国,德国,其它地区,全部节点,自动选择,直连]
 
   - name: Telegram
     type: select
-    proxies: [默认,香港,台湾,日本,新加坡,美国,其它地区,全部节点,自动选择,直连]
+    proxies: [默认,香港,台湾,日本,韩国,新加坡,美国,加拿大,英国,法国,德国,其它地区,全部节点,自动选择,直连]
 
   - name: Twitter
     type: select
-    proxies: [默认,香港,台湾,日本,新加坡,美国,其它地区,全部节点,自动选择,直连]
+    proxies: [默认,香港,台湾,日本,韩国,新加坡,美国,加拿大,英国,法国,德国,其它地区,全部节点,自动选择,直连]
 
   - name: 哔哩哔哩
     type: select
-    proxies: [默认,香港,台湾,日本,新加坡,美国,其它地区,全部节点,自动选择,直连]
+    proxies: [默认,香港,台湾,日本,韩国,新加坡,美国,加拿大,英国,法国,德国,其它地区,全部节点,自动选择,直连]
 
   - name: 巴哈姆特
     type: select
-    proxies: [默认,香港,台湾,日本,新加坡,美国,其它地区,全部节点,自动选择,直连]
+    proxies: [默认,香港,台湾,日本,韩国,新加坡,美国,加拿大,英国,法国,德国,其它地区,全部节点,自动选择,直连]
 
   - name: YouTube
     type: select
-    proxies: [默认,香港,台湾,日本,新加坡,美国,其它地区,全部节点,自动选择,直连]
+    proxies: [默认,香港,台湾,日本,韩国,新加坡,美国,加拿大,英国,法国,德国,其它地区,全部节点,自动选择,直连]
 
   - name: NETFLIX
     type: select
-    proxies: [默认,香港,台湾,日本,新加坡,美国,其它地区,全部节点,自动选择,直连]
+    proxies: [默认,香港,台湾,日本,韩国,新加坡,美国,加拿大,英国,法国,德国,其它地区,全部节点,自动选择,直连]
 
   - name: Spotify
     type: select
-    proxies:  [默认,香港,台湾,日本,新加坡,美国,其它地区,全部节点,自动选择,直连]
+    proxies:  [默认,香港,台湾,日本,韩国,新加坡,美国,加拿大,英国,法国,德国,其它地区,全部节点,自动选择,直连]
 
   - name: Github
     type: select
-    proxies:  [默认,香港,台湾,日本,新加坡,美国,其它地区,全部节点,自动选择,直连]
+    proxies:  [默认,香港,台湾,日本,韩国,新加坡,美国,加拿大,英国,法国,德国,其它地区,全部节点,自动选择,直连]
 
   - name: 国内
     type: select
-    proxies:  [直连,默认,香港,台湾,日本,新加坡,美国,其它地区,全部节点,自动选择]
+    proxies:  [直连,默认,香港,台湾,日本,韩国,新加坡,美国,加拿大,英国,法国,德国,其它地区,全部节点,自动选择]
 
   - name: 漏网之鱼
     type: select
-    proxies:  [默认,香港,台湾,日本,新加坡,美国,其它地区,全部节点,自动选择,直连]
+    proxies:  [默认,香港,台湾,日本,韩国,新加坡,美国,加拿大,英国,法国,德国,其它地区,全部节点,自动选择,直连]
 
   #分隔,下面是地区分组
   - name: 香港
@@ -213,7 +213,7 @@ proxy-groups:
     type: fallback
     include-all: true
     exclude-type: direct
-    filter: "(?i)^(?!.*(?:🇭🇰|🇯🇵|🇺🇸|🇸🇬|🇨🇳|港|hk|hongkong|台|tw|taiwan|日|jp|japan|新|sg|singapore|美|us|unitedstates)).*"
+    filter: "(?i)^(?!.*(?:🇭🇰|🇯🇵|🇺🇸|🇸🇬|🇨🇳|港|hk|hongkong|台|tw|taiwan|日|jp|japan|韩|kr|korea|korean|seoul|新|sg|singapore|美|us|unitedstates加|ca|canada|toronto|vancouver|montreal|英|uk|unitedkingdom|united kingdom|london|manchester|birmingham|法|fr|france|paris|marseille|lyon|德|de|germany|berlin|frankfurt|munich)).*"
     url: "http://www.gstatic.com/generate_204"
     tolerance: 20
     health-check: 
