@@ -76,27 +76,27 @@ proxy-groups:
   - {name: 🇫🇷 法国节点, type: select, include-all: true, filter: "(?i)法|fr|france"}
   - {name: 🇩🇪 德国节点, type: select, include-all: true, filter: "(?i)德|de|germany"}
 
-  - {name: 🔯 香港故转, type: fallback, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(港|HK|(?i)Hong))^((?!(解锁|流媒体)).)*$"}
-  - {name: 🔯 台湾故转, type: fallback, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(台|TW|(?i)Taiwan))^((?!(解锁|流媒体)).)*$"}
-  - {name: 🔯 日本故转, type: fallback, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(日|JP|(?i)Japan))^((?!(解锁|流媒体)).)*$"}
-  - {name: 🔯 韩国故转, type: fallback, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(韩|KR|(?i)Korea))^((?!(解锁|流媒体)).)*$"}
-  - {name: 🔯 狮城故转, type: fallback, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(新|狮城|SG|(?i)Singapore))^((?!(解锁|流媒体)).)*$"}
-  - {name: 🔯 美国故转, type: fallback, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(美|US|(?i)United States))^((?!(解锁|流媒体)).)*$"}
-  - {name: 🔯 加拿大故转, type: fallback, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(加|CA|(?i)Canada))^((?!(解锁|流媒体)).)*$"}
-  - {name: 🔯 英国故转, type: fallback, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(英|UK|(?i)United Kingdom|Britain))^((?!(解锁|流媒体)).)*$"}
-  - {name: 🔯 法国故转, type: fallback, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(法|FR|(?i)France))^((?!(解锁|流媒体)).)*$"}
-  - {name: 🔯 德国故转, type: fallback, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(德|DE|(?i)Germany))^((?!(解锁|流媒体)).)*$"}
+  - {name: 🔯 香港故转, type: fallback, include-all: true, tolerance: 20, interval: 60, url: "http://www.gstatic.com/generate_204", filter: "(?=.*(港|HK|(?i)Hong))^((?!(解锁|流媒体)).)*$"}
+  - {name: 🔯 台湾故转, type: fallback, include-all: true, tolerance: 20, interval: 60, url: "http://www.gstatic.com/generate_204", filter: "(?=.*(台|TW|(?i)Taiwan))^((?!(解锁|流媒体)).)*$"}
+  - {name: 🔯 日本故转, type: fallback, include-all: true, tolerance: 20, interval: 60, url: "http://www.gstatic.com/generate_204", filter: "(?=.*(日|JP|(?i)Japan))^((?!(解锁|流媒体)).)*$"}
+  - {name: 🔯 韩国故转, type: fallback, include-all: true, tolerance: 20, interval: 60, url: "http://www.gstatic.com/generate_204", filter: "(?=.*(韩|KR|(?i)Korea))^((?!(解锁|流媒体)).)*$"}
+  - {name: 🔯 狮城故转, type: fallback, include-all: true, tolerance: 20, interval: 60, url: "http://www.gstatic.com/generate_204", filter: "(?=.*(新|狮城|SG|(?i)Singapore))^((?!(解锁|流媒体)).)*$"}
+  - {name: 🔯 美国故转, type: fallback, include-all: true, tolerance: 20, interval: 60, url: "http://www.gstatic.com/generate_204", filter: "(?=.*(美|US|(?i)United States))^((?!(解锁|流媒体)).)*$"}
+  - {name: 🔯 加拿大故转, type: fallback, include-all: true, tolerance: 20, interval: 60, url: "http://www.gstatic.com/generate_204", filter: "(?=.*(加|CA|(?i)Canada))^((?!(解锁|流媒体)).)*$"}
+  - {name: 🔯 英国故转, type: fallback, include-all: true, tolerance: 20, interval: 60, url: "http://www.gstatic.com/generate_204", filter: "(?=.*(英|UK|(?i)United Kingdom|Britain))^((?!(解锁|流媒体)).)*$"}
+  - {name: 🔯 法国故转, type: fallback, include-all: true, tolerance: 20, interval: 60, url: "http://www.gstatic.com/generate_204", filter: "(?=.*(法|FR|(?i)France))^((?!(解锁|流媒体)).)*$"}
+  - {name: 🔯 德国故转, type: fallback, include-all: true, tolerance: 20, interval: 60, url: "http://www.gstatic.com/generate_204", filter: "(?=.*(德|DE|(?i)Germany))^((?!(解锁|流媒体)).)*$"}
 
-  - {name: ♻️ 香港自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(港|HK|(?i)Hong))^((?!(解锁|流媒体)).)*$"}
-  - {name: ♻️ 台湾自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(台|TW|(?i)Taiwan))^((?!(解锁|流媒体)).)*$"}
-  - {name: ♻️ 日本自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(日|JP|(?i)Japan))^((?!(解锁|流媒体)).)*$" }
-  - {name: ♻️ 韩国自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(韩|KR|(?i)Korea))^((?!(解锁|流媒体)).)*$"}
-  - {name: ♻️ 狮城自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(新|狮城|SG|(?i)Singapore))^((?!(解锁|流媒体)).)*$"}
-  - {name: ♻️ 美国自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(美|US|(?i)States|America))^((?!(解锁|流媒体)).)*$"}
-  - {name: ♻️ 加拿大自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(加|CA|(?i)Canada))^((?!(解锁|流媒体)).)*$"}
-  - {name: ♻️ 英国自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(英|UK|(?i)United Kingdom|Britain))^((?!(解锁|流媒体)).)*$"}
-  - {name: ♻️ 法国自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(法|FR|(?i)France))^((?!(解锁|流媒体)).)*$"}
-  - {name: ♻️ 德国自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(德|DE|(?i)Germany))^((?!(解锁|流媒体)).)*$"}
+  - {name: ♻️ 香港自动, type: url-test, include-all: true, tolerance: 20, interval: 300, url: "http://www.gstatic.com/generate_204", filter: "(?=.*(港|HK|(?i)Hong))^((?!(解锁|流媒体)).)*$"}
+  - {name: ♻️ 台湾自动, type: url-test, include-all: true, tolerance: 20, interval: 300, url: "http://www.gstatic.com/generate_204", filter: "(?=.*(台|TW|(?i)Taiwan))^((?!(解锁|流媒体)).)*$"}
+  - {name: ♻️ 日本自动, type: url-test, include-all: true, tolerance: 20, interval: 300, url: "http://www.gstatic.com/generate_204", filter: "(?=.*(日|JP|(?i)Japan))^((?!(解锁|流媒体)).)*$" }
+  - {name: ♻️ 韩国自动, type: url-test, include-all: true, tolerance: 20, interval: 300, url: "http://www.gstatic.com/generate_204", filter: "(?=.*(韩|KR|(?i)Korea))^((?!(解锁|流媒体)).)*$"}
+  - {name: ♻️ 狮城自动, type: url-test, include-all: true, tolerance: 20, interval: 300, url: "http://www.gstatic.com/generate_204", filter: "(?=.*(新|狮城|SG|(?i)Singapore))^((?!(解锁|流媒体)).)*$"}
+  - {name: ♻️ 美国自动, type: url-test, include-all: true, tolerance: 20, interval: 300, url: "http://www.gstatic.com/generate_204", filter: "(?=.*(美|US|(?i)States|America))^((?!(解锁|流媒体)).)*$"}
+  - {name: ♻️ 加拿大自动, type: url-test, include-all: true, tolerance: 20, interval: 300, url: "http://www.gstatic.com/generate_204", filter: "(?=.*(加|CA|(?i)Canada))^((?!(解锁|流媒体)).)*$"}
+  - {name: ♻️ 英国自动, type: url-test, include-all: true, tolerance: 20, interval: 300, url: "http://www.gstatic.com/generate_204", filter: "(?=.*(英|UK|(?i)United Kingdom|Britain))^((?!(解锁|流媒体)).)*$"}
+  - {name: ♻️ 法国自动, type: url-test, include-all: true, tolerance: 20, interval: 300, url: "http://www.gstatic.com/generate_204", filter: "(?=.*(法|FR|(?i)France))^((?!(解锁|流媒体)).)*$"}
+  - {name: ♻️ 德国自动, type: url-test, include-all: true, tolerance: 20, interval: 300, url: "http://www.gstatic.com/generate_204", filter: "(?=.*(德|DE|(?i)Germany))^((?!(解锁|流媒体)).)*$"}
 
 
 rules:
